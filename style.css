@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1ed5eb;
+  font-family: cursive;
+}
+.boxes {
+  width: 400px;
+  padding: 10px;
+}
+.boxes .inputBox {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 30px #206e6e;
+  margin-bottom: 20px;
+  display: flex;
+}
+.inputBox input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+}
+.inputBox span#toggleBtn {
+  background-color: #eee;
+  width: 40px;
+  height: 35px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.inputBox #toggleBtn::before {
+  content: "\f06e";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: fontAwesome;
+}
+.inputBox #toggleBtn.hide::before {
+  content: "\f070";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: fontAwesome;
+}
+.validateBox {
+  background-color: #376488;
+  padding: 20px;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+}
+.validateBox ul {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  gap: 8px;
+}
+.validateBox ul li {
+  list-style: none;
+  position: relative;
+  transition: 0.5s;
+}
+.validateBox ul li::before {
+  content: "\f192";
+  position: absolute;
+  font-family: fontAwesome;
+  left: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.validateBox ul li.valid::before {
+  content: "\f00c";
+  position: absolute;
+  font-family: fontAwesome;
+  color: #6eeb1e;
+}
+.validateBox ul li.valid {
+  color: #ccc;
+}
